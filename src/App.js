@@ -9,8 +9,14 @@ function App() {
 
   const submitHandler = e => {
     e.preventDefault();
-    console.log('submitted');
-    console.log(count);
+    let amount = parseInt(count);
+    if (count <= 0) {
+      amount = 0;
+    }
+    if (count > 8) {
+      amount = 8;
+    }
+    setText(data.slice(0, amount));
   };
 
   const onChangeHandler = e => {
@@ -24,7 +30,7 @@ function App() {
         value={count}
         onChange={onChangeHandler}
       />
-      <DisplayText />
+      <DisplayText text={text} />
     </>
   );
 }

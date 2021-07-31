@@ -1,8 +1,9 @@
-function DisplayText() {
+function DisplayText(props) {
   return (
     <article className='lorem-text section-center'>
-      <p>Jelly sweet roll jelly beans biscuit pie</p>
-      <p>Jelly sweet roll jelly beans biscuit pie</p>
+      {props.text.map((item, index) => {
+        return <p key={index}>{item}</p>;
+      })}
     </article>
   );
 }
