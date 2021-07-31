@@ -1,6 +1,6 @@
 function Form(props) {
   return (
-    <section className='srction-senter'>
+    <section className='section-senter'>
       <h3>Tired of boring lorem ipsum?</h3>
       <form className='lorem-form' onSubmit={props.handleSubmit}>
         <label htmlFor='amount'>How many paragraphs?</label>

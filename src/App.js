@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Form from './components/Form';
+import DisplayText from './components/DisplayText';
 import data from './data';
 
 function App() {
@@ -17,11 +18,14 @@ function App() {
   };
 
   return (
-    <Form
-      handleSubmit={submitHandler}
-      value={count}
-      onChange={onChangeHandler}
-    />
+    <>
+      <Form
+        handleSubmit={submitHandler}
+        value={count}
+        onChange={onChangeHandler}
+      />
+      <DisplayText />
+    </>
   );
 }
 
